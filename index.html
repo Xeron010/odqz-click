@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ODQZ Click - Maximize your digital marketing ROI with advanced click optimization">
+    <title>ODQZ Click - Digital Marketing Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Rubik', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #0f0f0f;
+        }
+        
+        header {
+            background: #1a1a1a;
+            padding: 20px 0;
+            border-bottom: 2px solid #ff4757;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav .logo {
+            font-size: 26px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ff4757 0%, #ff6348 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 35px;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        nav a:hover {
+            color: #ff4757;
+            text-shadow: 0 0 10px rgba(255,71,87,0.5);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            padding: 100px 20px;
+            border-bottom: 2px solid #ff4757;
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .hero-text h1 {
+            font-size: 52px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: white;
+            font-weight: 800;
+        }
+        
+        .hero-text h1 span {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6348 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-text p {
+            font-size: 18px;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 16px 40px;
+            background: linear-gradient(135deg, #ff4757 0%, #ff6348 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 8px 20px rgba(255,71,87,0.4);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255,71,87,0.6);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #ff4757;
+            color: #ff4757;
+        }
+        
+        .btn-outline:hover {
+            background: rgba(255,71,87,0.1);
+        }
+        
+        .hero-visual {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6348 100%);
+            border-radius: 20px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 140px;
+            box-shadow: 0 20px 50px rgba(255,71,87,0.3);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 50px;
+            color: white;
+            font-weight: 800;
+        }
+        
+        .section-title span {
+            color: #ff4757;
+        }
+        
+        .features-section {
+            background: #1a1a1a;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background: #2d2d2d;
+            padding: 40px;
+            border-radius: 12px;
+            border-left: 4px solid #ff4757;
+            transition: all 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255,71,87,0.2);
+        }
+        
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        
+        .feature-card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+            color: white;
+        }
+        
+        .feature-card p {
+            color: #aaa;
+        }
+        
+        .stats-section {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6348 100%);
+            color: white;
+            padding: 80px 20px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+        
+        .stat {
+            padding: 20px;
+        }
+        
+        .stat-number {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 16px;
+            opacity: 0.95;
+        }
+        
+        .solutions-section {
+            background: #0f0f0f;
+        }
+        
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        
+        .solution-card {
+            background: #2d2d2d;
+            padding: 30px;
+            border-radius: 12px;
+            border-top: 3px solid #ff4757;
+        }
+        
+        .solution-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: #ff4757;
+        }
+        
+        .solution-card p {
+            color: #aaa;
+        }
+        
+        .pricing-section {
+            background: #1a1a1a;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .pricing-card {
+            background: #2d2d2d;
+            padding: 40px;
+            border-radius: 12px;
+            border: 2px solid #ff4757;
+            text-align: center;
+        }
+        
+        .pricing-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: white;
+        }
+        
+        .pricing-card .price {
+            font-size: 48px;
+            font-weight: 800;
+            color: #ff4757;
+            margin: 20px 0;
+        }
+        
+        .pricing-card ul {
+            list-style: none;
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .pricing-card li {
+            padding: 10px 0;
+            color: #aaa;
+            border-bottom: 1px solid #444;
+        }
+        
+        .pricing-card li:before {
+            content: "✓ ";
+            color: #ff4757;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6348 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        
+        .cta-section h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        footer {
+            background: #0a0a0a;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 2px solid #ff4757;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-text h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🚀 ODQZ CLICK</div>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Get Started</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Maximize Your <span>Click Value</span></h1>
+                <p>Advanced marketing automation that turns clicks into conversions. Boost your ROI by 300% with AI-powered optimization.</p>
+                <a href="#" class="btn">Start Free Trial</a>
+                <a href="#features" class="btn btn-outline">See How It Works</a>
+            </div>
+            <div class="hero-visual">⚡</div>
+        </div>
+    </section>
+
+    <section class="features-section" id="features">
+        <div class="container">
+            <h2 class="section-title">Powerful <span>Features</span></h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Smart Targeting</h3>
+                    <p>AI-powered audience segmentation to reach the right people at the right time.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Real-Time Analytics</h3>
+                    <p>Track every click, conversion, and interaction with detailed dashboards.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>A/B Testing</h3>
+                    <p>Automatically test and optimize campaigns for maximum performance.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI Optimization</h3>
+                    <p>Machine learning continuously improves your campaign performance.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Multi-Channel</h3>
+                    <p>Manage all your marketing channels from one unified platform.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔗</div>
+                    <h3>API Integration</h3>
+                    <p>Seamlessly connect with your existing marketing stack.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat">
+                    <div class="stat-number">10,000+</div>
+                    <div class="stat-label">Active Campaigns</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">$5B+</div>
+                    <div class="stat-label">Value Generated</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">3.5x</div>
+                    <div class="stat-label">Avg ROI Increase</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">Uptime</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="solutions-section">
+        <div class="container">
+            <h2 class="section-title">Solutions For <span>Every Business</span></h2>
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <h3>E-Commerce</h3>
+                    <p>Increase product sales with targeted campaigns and conversion optimization.</p>
+                </div>
+                <div class="solution-card">
+                    <h3>SaaS</h3>
+                    <p>Drive qualified leads and improve customer acquisition costs.</p>
+                </div>
+                <div class="solution-card">
+                    <h3>Digital Services</h3>
+                    <p>Maximize bookings and service requests with smart automation.</p>
+                </div>
+                <div class="solution-card">
+                    <h3>B2B Sales</h3>
+                    <p>Generate quality leads and accelerate your sales pipeline.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Transparent <span>Pricing</span></h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">$99</div>
+                    <p>/month</p>
+                    <ul>
+                        <li>5 campaigns</li>
+                        <li>Basic analytics</li>
+                        <li>Email support</li>
+                        <li>Monthly reporting</li>
+                    </ul>
+                    <a href="#" class="btn">Get Started</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Professional</h3>
+                    <div class="price">$299</div>
+                    <p>/month</p>
+                    <ul>
+                        <li>Unlimited campaigns</li>
+                        <li>Advanced analytics</li>
+                        <li>Priority support</li>
+                        <li>A/B testing</li>
+                        <li>AI optimization</li>
+                    </ul>
+                    <a href="#" class="btn">Get Started</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">Custom</div>
+                    <p>&nbsp;</p>
+                    <ul>
+                        <li>Everything in Pro</li>
+                        <li>24/7 support</li>
+                        <li>Custom integrations</li>
+                        <li>Dedicated manager</li>
+                        <li>Custom solutions</li>
+                    </ul>
+                    <a href="#" class="btn">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <h2>Ready to Maximize Your Clicks?</h2>
+            <p>Join thousands of marketers growing their business with ODQZ Click</p>
+            <a href="#" class="btn" style="background: white; color: #ff4757; border: none;">Start Free Trial Today</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 ODQZ Click. All rights reserved.</p>
+    </footer>
+</body>
+</html>
